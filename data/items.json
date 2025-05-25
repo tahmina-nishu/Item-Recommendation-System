@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Wireless Mouse",
+        "price": 400,
+        "value": 9,
+        "image": "https://th.bing.com/th/id/R.d72596ec0235fc79fae91217411183e8?rik=APZ%2f%2bsKYAjPeVw&riu=http%3a%2f%2fg-ecx.images-amazon.com%2fimages%2fG%2f01%2faplusautomation%2fvendorimages%2faa86ae59-4123-4ca1-8839-b8efa66283f3._V321517663_.jpg&ehk=c5NU%2bbpF7VquIRJfkbqdoSH4qJp7lF0UDfwVd9nNevY%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "name": "USB-C Charger",
+        "price": 800,
+        "value": 8,
+        "image": "https://th.bing.com/th/id/OIP.gYBH0AxzPv9T_yO5FN8z4wHaHa?w=183&h=183&c=7&r=0&o=5&dpr=1.4&pid=1.7"
+    },
+    {
+        "name": "Bluetooth Headphones",
+        "price": 1500,
+        "value": 10,
+        "image": "https://th.bing.com/th/id/R.d7ad97800dcb82d10ff1d11ec00e844c?rik=00dE6coLOX65hA&pid=ImgRaw&r=0"
+    },
+    {
+        "name": "Notebook",
+        "price": 100,
+        "value": 4,
+        "image": "https://www.bing.com/images/search?view=detailV2&ccid=j89uLvdd&id=004C4805411C63052B9F2572A655CA3EEA60B61F&thid=OIP.j89uLvddbHsw49NvCjMFEwHaHa&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.8fcf6e2ef75d6c7b30e3d36f0a330513%3frik%3dH7Zg6j7KVaZyJQ%26riu%3dhttp%253a%252f%252fweknowyourdreams.com%252fimages%252fnotebook%252fnotebook-01.jpg%26ehk%3dX90%252bZiAz6rVBfhCpYYhH2uU9DKVIhsh46ioiL0FkFSE%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1500&expw=1500&q=Notebook&simid=608040453929179500&FORM=IRPRST&ck=2D19BF389E2B5469752909076BC5386B&selectedIndex=29&itb=0"
+    },
+    {
+        "name": "Laptop Stand",
+        "price": 700,
+        "value": 6,
+        "image": "https://www.bing.com/images/search?view=detailV2&ccid=bluJ03UB&id=C7D721322A9E32DA6F644C9C8BEC5EA51D62913E&thid=OIP.bluJ03UBRxAfZ8BMALQ5mAHaHa&mediaurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.6e5b89d3750147101f67c04c00b43998%3frik%3dPpFiHaVe7IucTA%26riu%3dhttp%253a%252f%252fwww.willinternational.co.uk%252fwp-content%252fuploads%252fLaptop-Stand-Website-Images-Desk.jpg%26ehk%3dtFWvcy0knBDGVfFoYGn3jYec3DJZ6h8hGu8Z4dXhxwg%253d%26risl%3d%26pid%3dImgRaw%26r%3d0&exph=1500&expw=1500&q=Laptop+Stand&simid=608026641335458264&FORM=IRPRST&ck=20503646AAE86058D2B70E56EDF8E411&selectedIndex=2&itb=0"
+    },
+    {
+        "name": "Webcam",
+        "price": 1200,
+        "value": 7,
+        "image": "https://www.bing.com/images/search?view=detailV2&ccid=tjC6a2yB&id=4FFEBA34F61498F9BBE8DAB8171BA76378E047E1&thid=OIP.tjC6a2yBfdYWbzEdYB7fQwHaGE&mediaurl=https%3a%2f%2fcdn.mos.cms.futurecdn.net%2fNb9TRcGT46qVvGLkzCX9gd.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.b630ba6b6c817dd6166f311d601edf43%3frik%3d4UfgeGOnGxe42g%26pid%3dImgRaw%26r%3d0&exph=1718&expw=2098&q=Webcam&simid=608020336317722179&FORM=IRPRST&ck=66F40DB114266A99F2766C36D1B12F75&selectedIndex=1&itb=0"
+    },
+    {
+        "name": "Keyboard",
+        "price": 600,
+        "value": 5,
+        "image": "https://www.bing.com/images/search?view=detailV2&ccid=2C6RFyn2&id=61101B024EDF3D56A05CAEC0BEAEE42F61B377C2&thid=OIP.2C6RFyn2aaN6Iup4MwZL9gHaEb&mediaurl=https%3a%2f%2fi.kinja-img.com%2fgawker-media%2fimage%2fupload%2ft_original%2fixf0dfmawynrlc88mgay.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.d82e911729f669a37a22ea7833064bf6%3frik%3dwnezYS%252fkrr7Arg%26pid%3dImgRaw%26r%3d0&exph=956&expw=1600&q=Keyboard&simid=608008860164049503&FORM=IRPRST&ck=694D19998821048CCD0EE46F52117108&selectedIndex=22&itb=0"
+    }
+]

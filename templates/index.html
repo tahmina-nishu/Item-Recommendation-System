@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 OptiCart – Smart Item Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-light: #f4f6fa;
+      --bg-dark: #121212;
+      --card-light: #fff;
+      --card-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f5f5f5;
+      --accent: #2f80ed;
+      --success: #27ae60;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .theme-toggle button {
+      padding: 8px 12px;
+      background: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    form {
+      background-color: var(--card-light);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    body.dark form {
+      background-color: var(--card-dark);
+    }
+
+    input[type="number"], input[type="text"] {
+      padding: 10px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: var(--success);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #219150;
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--accent);
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px 16px;
+      margin: 20px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1000px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background-color: var(--card-light);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease-in-out both;
+    }
+
+    body.dark .card {
+      background-color: var(--card-dark);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    @keyframes fadeInUp {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: var(--card-light);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    body.dark table {
+      background-color: var(--card-dark);
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #e0e0e0;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    .summary {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      background-color: var(--accent);
+      color: white;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛒 OptiCart – Smart Item Recommendation System</h1>
+  <div class="theme-toggle">
+    <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+  </div>
+</header>
+
+<div class="container">
+  <form method="post">
+    <label><strong>Enter your budget (৳):</strong></label>
+    <input type="number" name="budget" required>
+    <button type="submit">Recommend</button>
+  </form>
+
+  <input type="text" id="searchInput" placeholder="🔍 Search items..." onkeyup="filterItems()">
+
+  <h2>📦 Available Items</h2>
+  <div class="grid-container" id="itemGrid">
+    {% for item in all_items %}
+    <div class="card">
+      <img src="{{ item.image }}" alt="{{ item.name }}">
+      <h3>{{ item.name }}</h3>
+      <p><strong>Price:</strong> ৳{{ item.price }}</p>
+      <p><strong>Value:</strong> {{ item.value }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if items %}
+  <div class="section">
+    <h2>✅ Recommended Items</h2>
+    <table>
+      <tr>
+        <th>Item Name</th>
+        <th>Price (৳)</th>
+        <th>Value</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td>{{ item.value }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    <p class="summary">Total Value Achieved: {{ value }}</p>
+  </div>
+  {% endif %}
+</div>
+
+<footer>
+  &copy; 2025 OptiCart – Smart Item Recommender. Made with ❤️ for your university project.
+</footer>
+
+<script>
+  function filterItems() {
+    const input = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+      const name = card.querySelector("h3").textContent.toLowerCase();
+      card.style.display = name.includes(input) ? "block" : "none";
+    });
+  }
+
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
